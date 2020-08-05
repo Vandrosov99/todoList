@@ -4,30 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List</title>
+    <title>TDo</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./icons/fav.png" />
+
 </head>
 
 <body>
     <div class="container">
         <div class="card">
             <div class="card__main">
+                <!-- .card__ -->
+                <div class="card__name">Best <span>Tasker</span> In Da <span>World</span>
+                </div>
+
                 <div class="card__title">What u want to add?</div>
                 <div class="card__input">
-                    <input type="text" class="card__name">
+                    <input type="text" class="card__task" placeholder="New Task">
                 </div>
                 <div class="card__btn_add">Add Task</div>
             </div>
             <div class="card__action">
                 <div class="card__title">List Task</div>
-                <div class="card__filter"><input type="text" class="card__search"></div>
+                <div class="card__filter"><input type="text" placeholder="Find Out" class="card__search"></div>
                 <div class="card__collection">
-                    <div class="card__taskItem"></div>
+                    <div class="card__taskItem">
+                        <p class="card__itemName">Task_1</p>
+                        <div class="card__delete">
+                            <div class="leftright"></div>
+                            <div class="rightleft"></div>
+                        </div>
+                    </div>
                 </div>
+                <div class="card__isEmpty"></div>
                 <div class="card__btn_clear">Clear Task</div>
             </div>
         </div>
     </div>
+    <div class="contact">
+        <div class="contact__title">You can find me here!</div>
+        <div class="contact__links">
+            <div class="contact__item">
+                <a href="https://github.com/Vandrosov99"><img src="./icons/github.png" alt=""></a>
+            </div>
+            <div class="contact__item">
+                <a href="https://www.linkedin.com/in/volodymyr-androsov-3860921a3/"><img src="./icons/linkedin.png"
+                        alt=""></a>
+            </div>
+            <div class="contact__item">
+                <a href="https://www.instagram.com/v_andrsv/?hl=uk"><img src="./icons/instagram.png" alt=""></a>
+            </div>
+            <div class="contact__item">
+                <a href="https://t.me/Shotz1k"><img src="./icons/telegram.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="/scripts/app.js"></script>
 
