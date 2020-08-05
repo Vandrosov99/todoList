@@ -33,13 +33,13 @@ body {
       .container .card .card__main .card__input {
         margin-bottom: 1.75rem; }
         .container .card .card__main .card__input .card__task {
-          padding: 8px 20px;
+          padding: 15px 20px;
           display: block;
           border: none;
           border-bottom: 1px solid #ccc;
           width: 100%;
           border-color: gray;
-          color: gray; }
+          color: #000; }
         .container .card .card__main .card__input .card__task:focus {
           outline-color: #26a69a; }
         .container .card .card__main .card__input .card__task:hover {
@@ -65,13 +65,13 @@ body {
     .container .card .card__action .card__filter {
       margin-bottom: 1.75rem; }
       .container .card .card__action .card__filter .card__search {
-        padding: 8px 20px;
+        padding: 15px 20px;
         display: block;
         border: none;
         border-bottom: 1px solid #ccc;
         width: 100%;
         border-color: gray;
-        color: gray; }
+        color: #000; }
       .container .card .card__action .card__filter .card__search:focus {
         outline-color: #26a69a; }
       .container .card .card__action .card__filter .card__search:hover {
@@ -83,7 +83,7 @@ body {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 7px 20px;
         border: 1px solid gray;
         align-items: center; }
         .container .card .card__action .card__collection .card__taskItem .card__delete {

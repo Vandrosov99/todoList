@@ -46,13 +46,13 @@ body {
                 margin-bottom: 1.75rem;
 
                 .card__task {
-                    padding: 8px 20px;
+                    padding: 15px 20px;
                     display: block;
                     border: none;
                     border-bottom: 1px solid #ccc;
                     width: 100%;
                     border-color: gray;
-                    color: gray;
+                    color: #000;
                 }
 
                 .card__task:focus {
@@ -95,13 +95,13 @@ body {
                 margin-bottom: 1.75rem;
 
                 .card__search {
-                    padding: 8px 20px;
+                    padding: 15px 20px;
                     display: block;
                     border: none;
                     border-bottom: 1px solid #ccc;
                     width: 100%;
                     border-color: gray;
-                    color: gray;
+                    color: #000;
                 }
 
                 .card__search:focus {
@@ -123,7 +123,7 @@ body {
                     flex-direction: row;
                     flex-wrap: nowrap;
                     justify-content: space-between;
-                    padding: 10px 20px;
+                    padding: 7px 20px;
                     border: 1px solid gray;
                     align-items: center;
 
