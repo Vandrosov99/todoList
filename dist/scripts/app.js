@@ -32,6 +32,13 @@ function addTask(e) {
     }
     createTask(addInput.value);
     storeTaskInLocalStorage(addInput.value);
+    console.log(collection.childNodes.length)
+    if (collection.childNodes.length >= 1) {
+        console.log("asdasd")
+        emptyLine.style.display = 'none';
+    } else {
+        emptyLine.style.display = 'block';
+    }
     addInput.value = "";
 }
 // create Div with text Task
@@ -55,6 +62,12 @@ function removeSingleTask(e) {
     if (cardDel) {
         e.target.parentElement.remove();
         removeTaskFromLocalStorage(e.target.parentElement.firstChild.nextSibling.textContent);
+    }
+    if (collection.childNodes.length >= 1) {
+        console.log("asdasd")
+        emptyLine.style.display = 'none';
+    } else {
+        emptyLine.style.display = 'block';
     }
 }
 
@@ -111,6 +124,7 @@ function getTasks() {
 
     // 
     if (collection.childNodes.length >= 1) {
+        console.log("asdasd")
         emptyLine.style.display = 'none';
     } else {
         emptyLine.style.display = 'block';
@@ -136,8 +150,14 @@ function removeTaskFromLocalStorage(el) {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 }
-
-
 function removeAllTasksFromLocalStorage() {
     localStorage.clear();
+
+    if (collection.childNodes.length >= 1) {
+        console.log("asdasd")
+        emptyLine.style.display = 'none';
+    } else {
+        emptyLine.style.display = 'block';
+    }
+
 }
