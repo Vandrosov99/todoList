@@ -98,8 +98,10 @@ function storeTaskInLocalStorage(task) {
 
 
 function getTasks() {
-
-
+    //выводит все узлы 
+    console.log(collection)
+    // получаю undefined
+    console.log(collection.firstChild)
 
     // 
     if (collection.childNodes.length >= 1) {
