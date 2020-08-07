@@ -98,7 +98,8 @@ body {
           width: 22px;
           height: 35px;
           cursor: pointer; }
-          .container .card .card__action .card__collection .card__taskItem .card__delete .leftright {
+          .container .card .card__action .card__collection .card__taskItem .card__delete::before {
+            content: "";
             height: 4px;
             width: 25px;
             position: absolute;
@@ -107,7 +108,8 @@ body {
             border-radius: 2px;
             transform: rotate(45deg);
             transition: all .3s ease-in; }
-          .container .card .card__action .card__collection .card__taskItem .card__delete .rightleft {
+          .container .card .card__action .card__collection .card__taskItem .card__delete::after {
+            content: "";
             height: 4px;
             width: 25px;
             position: absolute;
@@ -116,12 +118,12 @@ body {
             border-radius: 2px;
             transform: rotate(-45deg);
             transition: all .3s ease-in; }
-        .container .card .card__action .card__collection .card__taskItem .card__delete:hover .leftright {
-          transform: rotate(-45deg);
-          background-color: #F25C66; }
-        .container .card .card__action .card__collection .card__taskItem .card__delete:hover .rightleft {
-          transform: rotate(45deg);
-          background-color: #F25C66; }
+          .container .card .card__action .card__collection .card__taskItem .card__delete:hover::before {
+            transform: rotate(-45deg);
+            background-color: #F25C66; }
+          .container .card .card__action .card__collection .card__taskItem .card__delete:hover::after {
+            transform: rotate(45deg);
+            background-color: #F25C66; }
     .container .card .card__action .card__isEmpty {
       margin: .5rem 0 1rem 0;
       border: 1px solid #e0e0e0;
@@ -143,6 +145,10 @@ body {
       cursor: pointer; }
 
 .contact {
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   top: 30px;
   right: 20px;
   position: absolute;
@@ -158,3 +164,72 @@ body {
       .contact .contact__links .contact__item img {
         width: 30px;
         height: 30px; }
+
+@media (max-width: 1070px) {
+  .contact {
+    padding: 10px; }
+    .contact .contact__title {
+      font-size: 16px;
+      text-align: center; }
+    .contact .contact__links .contact__item img {
+      width: 25px;
+      height: 25px; } }
+
+@media (max-width: 950px) {
+  .contact {
+    display: none; } }
+
+@media (max-width: 950px) {
+  .contact {
+    display: none; } }
+
+@media (max-width: 880px) {
+  .container {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 30px 100px; } }
+
+@media (max-width: 700px) {
+  .container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 30px 75px; } }
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 30px 75px; } }
+
+@media (max-width: 500px) {
+  .container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 30px 75px; }
+  body {
+    line-height: 1;
+    font-size: 14px; } }
+
+@media (max-width: 500px) {
+  .card__btn_add {
+    width: 40% !important; }
+  .card__btn_clear {
+    width: 40% !important; } }
+
+@media (max-width: 450px) {
+  .card__btn_add {
+    width: 45% !important; }
+  .card__btn_clear {
+    width: 45% !important; } }
+
+@media (max-width: 422px) {
+  .card__btn_add {
+    width: 50% !important; }
+  .card__btn_clear {
+    width: 50% !important; } }
+
+@media (max-width: 400px) {
+  .card__btn_add {
+    width: 100% !important; }
+  .card__btn_clear {
+    width: 100% !important; } }
