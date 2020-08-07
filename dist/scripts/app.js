@@ -32,13 +32,7 @@ function addTask(e) {
     }
     createTask(addInput.value);
     storeTaskInLocalStorage(addInput.value);
-    console.log(collection.childNodes.length)
-    if (collection.childNodes.length >= 1) {
-        console.log("asdasd")
-        emptyLine.style.display = 'none';
-    } else {
-        emptyLine.style.display = 'block';
-    }
+    isEmptyLine();
     addInput.value = "";
 }
 // create Div with text Task
@@ -63,12 +57,7 @@ function removeSingleTask(e) {
         e.target.parentElement.remove();
         removeTaskFromLocalStorage(e.target.parentElement.firstChild.nextSibling.textContent);
     }
-    if (collection.childNodes.length >= 1) {
-        console.log("asdasd")
-        emptyLine.style.display = 'none';
-    } else {
-        emptyLine.style.display = 'block';
-    }
+    isEmptyLine();
 }
 
 function removeAllTasks(e) {
@@ -123,12 +112,7 @@ function getTasks() {
     })
 
     // 
-    if (collection.childNodes.length >= 1) {
-        console.log("asdasd")
-        emptyLine.style.display = 'none';
-    } else {
-        emptyLine.style.display = 'block';
-    }
+    isEmptyLine()
 
 
 }
@@ -153,11 +137,14 @@ function removeTaskFromLocalStorage(el) {
 function removeAllTasksFromLocalStorage() {
     localStorage.clear();
 
+    isEmptyLine();
+
+}
+
+function isEmptyLine() {
     if (collection.childNodes.length >= 1) {
-        console.log("asdasd")
         emptyLine.style.display = 'none';
     } else {
         emptyLine.style.display = 'block';
     }
-
 }
