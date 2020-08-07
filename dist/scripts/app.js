@@ -99,16 +99,6 @@ function storeTaskInLocalStorage(task) {
 
 function getTasks() {
     //выводит все узлы 
-    console.log(collection)
-    // получаю undefined
-    console.log(collection.firstChild)
-
-    // 
-    if (collection.childNodes.length >= 1) {
-        emptyLine.style.display = 'none';
-    } else {
-        emptyLine.style.display = 'block';
-    }
 
 
     let tasks;
@@ -121,6 +111,17 @@ function getTasks() {
     tasks.forEach(function (task) {
         createTask(task);
     })
+
+    console.log(collection)
+    // получаю undefined
+    console.log(collection.firstChild)
+
+    // 
+    if (collection.childNodes.length >= 1) {
+        emptyLine.style.display = 'none';
+    } else {
+        emptyLine.style.display = 'block';
+    }
 
 
 }
