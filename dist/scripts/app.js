@@ -56,9 +56,6 @@ function removeSingleTask(e) {
         e.target.parentElement.remove();
         removeTaskFromLocalStorage(e.target.parentElement.firstChild.nextSibling.textContent);
     }
-
-    // console.log(e.target.parentElement.firstChild.nextSibling.textContent)
-
 }
 
 function removeAllTasks(e) {
@@ -111,10 +108,6 @@ function getTasks() {
     tasks.forEach(function (task) {
         createTask(task);
     })
-
-    console.log(collection)
-    // получаю undefined
-    console.log(collection.firstChild)
 
     // 
     if (collection.childNodes.length >= 1) {
